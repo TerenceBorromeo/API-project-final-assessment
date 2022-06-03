@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>CAP-Turret</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="header">
+            <div class="container">
+                <div class="textbox">
+                <img src="turret.png" width="250px" height="166px"/><br/><br/>
+                <h1>RECORD ALL<br /> YOU WANT</h1><br/>
+                    <p>
+                        Capture turret allows user to record anything they want
+                        to record. Users can record their screen display or
+                        even their webcam display.
+                    </p><br/>
+                <a href="#tutorial"><button class="button button5">START</button></a>
+                </div>
+            </div>      
+        </section>
+
+        <section id="tutorial" class="tutorial">
+          <script defer src="script2.js"></script>
+          <script defer src="script3.js"></script>
+          <br>
+          <h1 style="color: rgb(40, 78, 134); text-align: center;">HOW TO USE</h1><br>
+
+          <a href="#screenrecord">
+          <div class="row">
+            <div class="plat-col">
+                <img src="pcscreen.png" />
+                <div class="layer">
+                    <h3><i class="fa fa-desktop" id="icons"></i><br>Go to<br><br>Screen<br>Recording</h3>
+                </div>
+            </div>
+          </a>
+          <a href="#webcamrecord">
+            <div class="plat-col">
+              <img src="webcam1.jpg" />
+              <div class="layer">
+                  <h3><i class="fa fa-video-camera" id="icons"></i> <br />Go to<br><br>Webcam<br>Recording</h3>
+              </div>
+            </div>
+          </a>   
+          </div>
+
+          <div style="padding: 20px;display: flex;">
+            <div style="margin-left: 36%;">
+            <button  class="buttontutorial button5" data-modal-target="#modal">Screen Recording<br>Tutorial</button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <div class="title">Screen Recording</div>
+                <button style="color: rgb(40, 78, 134);" data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+                 1.) Click start.<br><br>
+                 2.) Choose the window or browser tab you want to record.<br><br>
+                 3.) Click share, and the recording will start. <br><br>
+                 4.) Click "stop" to stop the recording.<br><br>
+                 5.) Click the "<i class="fa fa-ellipsis-v"></i>" to download or use the picture mode feature.
+              </div>
+            </div>
+            <div id="overlay"></div>
+            </div>
+            &nbsp; &nbsp;
+            <div>
+              <button class="buttontutorial button5" data-modal-target="">Webcam Recording<br>Tutorial</button>
+              <div class="modal3" id="modal3">
+                <div class="modal-header3">
+                  <div class="title3">Webcam Recording</div>
+                  <button style="color: rgb(40, 78, 134);" data-close-button class="close-button3">&times;</button>
+                </div>
+                <div class="modal-body3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                </div>
+              </div>
+              <div id="overlay3"></div>
+            </div>
+          </div>         
+
+
+
+        </section>
+
+        <section id="screenrecord" class="screen1">
+          <div class="screencontainer"><br>
+            <h1 style="color:white;">Screen Recorder</h1>
+            <br><br><br>
+            <button class="button button5" id="startscreen">
+                Start
+              </button>
+              <button class="button button5" id="stopscreen" disabled>
+                Stop
+              </button><br><br><br><br>
+              <video width="1280" height="720" controls autoplay>          
+              <script src="script1.js"></script>
+          </div>
+
+
+
+        </section>
+        
+        <section id="webcamrecord" class="webcam">
+          <div class="webcamcontainer"><br>
+            <h1 style="color:white;">Webcam Recorder</h1>
+            <br><br><br>
+            <video id="gum" playsinline autoplay muted></video><br><br>
+            <video id="recorded" playsinline loop></video>
+      
+            <div>
+              <button class="button button5" id="start">Start</button>
+              <button class="button button5" id="record" disabled>Record</button><br>
+              <button class="button button5" id="play" disabled>Play</button>
+              <button class="button button5" id="download" disabled><i class="fa fa-download"></i> Download</button>
+            </div>   
+            <div>
+              <h6 style="color: white;">Media Stream Constraints options</h6>
+              <p style="font-size: 10px; color: white;">
+                Echo cancellation: <input type="checkbox" id="echoCancellation" />
+              </p>
+            </div>     
+            <script src="script.js"></script>
+          </div>
+            
+        </section>
+    </body>
+</html>
