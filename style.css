@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+            * {
+              margin: 0;
+              padding: 0;
+              font-family: "Press Start 2P";
+              scroll-behavior: smooth;
+            }
+            .header {
+              min-height: 100vh;
+              background-image: url(filming.png);
+            }
+
+            .container {
+              height: 650px;
+              width: 950px;
+              position: absolute;
+              top: 15%;
+              left: 25%;
+              text-align: center;
+              border: 2px solid skyblue;
+              background: rgba(0, 0, 0, 0.4);
+            }
+
+            .screencontainer {
+                height: 650px;
+                width: 950px;
+                position: absolute;
+                top: 205%;
+                left: 25%;
+                text-align: center;
+                border: 2px solid skyblue;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            .webcamcontainer {
+                height: 1075px;
+                width: 950px;
+                position: absolute;
+                top: 300%;
+                left: 25%;
+                text-align: center;
+                border: 2px solid skyblue;
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+            .tutorial {
+              background-color: #dac9b4;
+              height: 850px;
+            }
+
+            .screen1 {
+              min-height: 100vh;
+              background-image: url(filming.png);
+            }
+
+            .webcam {
+                min-height: 130vh;
+                background-image: url(filming.png);
+              }
+
+            .textbox {
+              width: 90%;
+              color: #fff;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%);
+              text-align: center;
+            }
+
+            .button {
+              border: none;
+              color: white;
+              padding: 16px 16px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 32px;
+              margin: 4px 4px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+            .button5 {
+              background: transparent;
+              color: lightskyblue;
+              border: 2px solid lightskyblue;
+            }
+
+            .button5:hover {
+              background-color: lightskyblue;
+              color: white;
+            }
+
+            button {
+              margin: 0 3px 10px 0;
+              padding-left: 2px;
+              padding-right: 2px;
+            }
+
+            button:last-of-type {
+              margin: 0;
+            }
+
+            p.borderBelow {
+              margin: 0 0 20px 0;
+              padding: 0 0 20px 0;
+            }
+
+            video {
+              border: 2px solid skyblue;
+              vertical-align: top;
+              --width: 35vw;
+              width: var(--width);
+              height: calc(var(--width) * 0.5625);
+            }
+
+            video:last-of-type {
+              margin: 0 0 20px 0;
+            }
+
+            video#gumVideo {
+              margin: 0 20px 20px 0;
+            }
+
+            .plat-col {
+              -ms-flex-preferred-size: 32%;
+                  flex-basis: 32%;
+              border-radius: 10px;
+              margin-bottom: 30px;
+              position: relative;
+              overflow: hidden;
+            }
+            
+            .plat-col img {
+              width: 100%;
+              display: block;
+            }
+            
+            .layer {
+              background: transparent;
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              -webkit-transition: 1s;
+              transition: 1s;
+            }
+            
+            .layer:hover {
+              background: rgba(0, 0, 0, 0.8);
+            }
+            
+            .layer h3 {
+              width: 100%;
+              font-weight: 500;
+              color: #fff;
+              font-size: 25px;
+              bottom: 0;
+              left: 50%;
+              -webkit-transform: translate(-50%);
+                      transform: translate(-50%);
+              position: absolute;
+              opacity: 0;
+              -webkit-transition: 0.5s;
+              transition: 0.5s;
+            }
+            
+            .layer:hover h3 {
+              bottom: 49%;
+              opacity: 1;
+            }
+            
+            #icons {
+              font-size: 100px;
+            }
+
+            .row {
+              width: 80%;
+              margin: auto;
+              margin-top: 5%;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between;
+            }
+
+            h3 {
+              text-align: center;
+              font-weight: 600;
+              margin: 10px 0;
+            }
+
+            *, *::after, *::before {
+              box-sizing: border-box;
+            }
+
+            /*screen*/
+            
+            .modal {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              color: rgb(40, 78, 134);;
+              transform: translate(-50%, -50%) scale(0);
+              transition: 200ms ease-in-out;
+              border: 2px solid rgb(40, 78, 134);
+              z-index: 10;
+              background-color: #dac9b4;
+              width: 500px;
+              max-width: 80%;
+            }
+            
+            .modal.active {
+              transform: translate(-50%, -50%) scale(1);
+            }
+            
+            .modal-header {
+              padding: 10px 15px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border-bottom: 2px solid rgb(40, 78, 134);
+            }
+            
+            .modal-header .title {
+              font-size: 1.25rem;
+              font-weight: bold;
+            }
+            
+            .modal-header .close-button {
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background: none;
+              font-size: 1.25rem;
+              font-weight: bold;
+            }
+            
+            .modal-body {
+              padding: 10px 15px;
+            }
+            
+            #overlay {
+              position: fixed;
+              opacity: 0;
+              transition: 200ms ease-in-out;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, .8);
+              pointer-events: none;
+            }
+            
+            #overlay.active {
+              opacity: 1;
+              pointer-events: all;
+            }
+
+            /*webcam*/
+            .modal3 {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              color: rgb(40, 78, 134);;
+              transform: translate(-50%, -50%) scale(0);
+              transition: 200ms ease-in-out;
+              border: 2px solid rgb(40, 78, 134);
+              z-index: 10;
+              background-color: #dac9b4;
+              width: 500px;
+              max-width: 80%;
+            }
+            
+            .modal3.active {
+              transform: translate(-50%, -50%) scale(1);
+            }
+            
+            .modal-header3 {
+              padding: 10px 15px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border-bottom: 2px solid rgb(40, 78, 134);
+            }
+            
+            .modal-header3 .title3 {
+              font-size: 1.25rem;
+              font-weight: bold;
+            }
+            
+            .modal-header3 .close-button3 {
+              cursor: pointer;
+              border: none;
+              outline: none;
+              background: none;
+              font-size: 1.25rem;
+              font-weight: bold;
+            }
+            
+            .modal-body3 {
+              padding: 10px 15px;
+            }
+            
+            #overlay3 {
+              position: fixed;
+              opacity: 0;
+              transition: 200ms ease-in-out;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, .8);
+              pointer-events: none;
+            }
+            
+            #overlay3.active {
+              opacity: 1;
+              pointer-events: all;
+            }
+            
+
+            .buttontutorial {
+              border: 2px solid rgb(40, 78, 134);
+              color: rgb(40, 78, 134);
+              padding: 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              transition-duration: 0.4s;
+              cursor: pointer;
+              background: transparent;
+            }
+
